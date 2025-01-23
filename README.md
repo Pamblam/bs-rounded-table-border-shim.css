@@ -10,4 +10,4 @@ These fixes work for all tables, not just Bootstrap, but I wrote the shiim speci
 
 This shim fixes Bootstrap's built-in `.table-bordered` class, and adds a new class: `.table-rounded`, which adds a border-radius to a table, with or without a border.
 
-Check out the demo.html for examples.
+Check out the demo.html or this [jsFiddle](https://jsfiddle.net/pamblam/2snjvdxk/8/) for examples.
