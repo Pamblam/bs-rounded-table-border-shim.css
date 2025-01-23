@@ -1,0 +1,83 @@
+/* overwrite the table-border class. */
+.d-table.table-bordered,
+table.table-bordered{
+	border-color: #dee2e6;
+	border-width: 0;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+/* Set default styling for each cell. */
+.d-table.table-bordered .d-table-cell,
+table.table-bordered td,
+table.table-bordered th{
+	border-width: 0;
+	border-color: #dee2e6;
+	border-style: solid;
+}
+
+/* Apply border only to top of every cell, 
+   except when it is the first row of a card, 
+   which already has it's own border */
+.d-table.table-bordered .d-table-cell:not(.card-body .d-table-row:first-child .d-table-cell),
+table.table-bordered td,
+table.table-bordered th{
+	border-top-width: 1px;
+}
+
+/* Apply border only to left every cell, 
+   except when it is the first cell in a card, 
+   which already has it's own border */
+.d-table.table-bordered .d-table-cell:not(.card-body .d-table-cell:first-child),
+table.table-bordered td,
+table.table-bordered th{
+	border-left-width: 1px;
+}
+
+/* Apply bottom border to all cells on the last row,
+   except when it is in a card body, which already has it's own border. */
+.d-table.table-bordered .d-table-row:last-child .d-table-cell:not(.card-body .d-table-cell),
+table.table-bordered tr:last-child td{
+	border-bottom-width: 1px;
+}
+
+/* Apply right border to all cells on the right side. */
+.d-table.table-bordered .d-table-cell:last-child:not(.card-body .d-table-cell),
+table.table-bordered td:last-child,
+table.table-bordered th:last-child{
+	border-right-width: 1px;
+}
+
+/* Now we can safely round our table corners. */
+.d-table.table-rounded,
+table.table-rounded{
+	border-radius: 0.375rem;
+}
+
+/* top left border radius */
+.d-table.table-rounded .d-table-row:first-child .d-table-cell:first-child,
+table.table-rounded *:first-child tr:first-child td:first-child,
+table.table-rounded *:first-child tr:first-child th:first-child{
+	border-top-left-radius: 0.375rem;
+}
+
+/* top right border radius */
+.d-table.table-rounded .d-table-row:first-child .d-table-cell:last-child,
+table.table-rounded *:first-child tr:first-child td:last-child,
+table.table-rounded *:first-child tr:first-child th:last-child{
+	border-top-right-radius: 0.375rem;
+}
+
+/* bottom right border radius */
+.d-table.table-rounded .d-table-row:last-child .d-table-cell:last-child,
+table.table-rounded *:last-child tr:last-child td:last-child,
+table.table-rounded *:last-child tr:last-child th:last-child{
+	border-bottom-right-radius: 0.375rem;
+}
+
+/* bottom right border radius */
+.d-table.table-rounded .d-table-row:last-child .d-table-cell:first-child,
+table.table-rounded *:last-child tr:last-child td:first-child,
+table.table-rounded *:last-child tr:last-child th:first-child{
+	border-bottom-left-radius: 0.375rem;
+}
